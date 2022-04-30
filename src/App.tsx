@@ -6,15 +6,20 @@ import './styles/App.scss';
 /* components */
 const Home = React.lazy(() => import('./components/Home'));
 const MyLibrary = React.lazy(() => import('./components/MyLibrary'));
+const Navbar = React.lazy(() => import('./components/Navbar'));
 
 const App = () => {
+
+  const handleComponent = (Component: React.ReactNode) => {
+    return <div><Navbar/>{Component}</div>
+  }
 
   return (
     <Suspense fallback={<Loader/>}>
       <Switch>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/library" element={<MyLibrary />} />
+          <Route path="/" element={handleComponent(<Home/>)} />
+          <Route path="/library" element={handleComponent(<MyLibrary/>)} />
         </Routes>
       </Switch>
     </Suspense>

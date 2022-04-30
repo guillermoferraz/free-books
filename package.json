@@ -23,6 +23,7 @@
     "@types/react-router-dom": "^5.3.3",
     "axios": "^0.27.2",
     "i18next": "^21.6.16",
+    "i18next-browser-languagedetector": "^6.1.4",
     "node-sass": "^7.0.1",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
